@@ -6,7 +6,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-export const Welcome = () => (
+export const Welcome = (props) => (
   <View style={{flex: 1}}>
     <View style={styles.titleContainer}>
       <Text style={styles.title}>
@@ -19,7 +19,7 @@ export const Welcome = () => (
       </Text>
     </View>
     <View style={{ padding: 30 }}>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity onPress={props.startWorkout} style={styles.button}>
         <Text style={styles.buttonText}>
           Start Workout
         </Text>
