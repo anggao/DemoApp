@@ -12,9 +12,7 @@ export const Topbar = (props) => (
 
 const styles = StyleSheet.create({
   container: {
-    height: 60,
-    backgroundColor: 'white',
-    flex: 1,
+    height: 70,
     padding: 10
   }
 });
