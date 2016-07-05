@@ -1,15 +1,20 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import TabView from 'react-native-scrollable-tab-view';
+import LinearGradient from 'react-native-linear-gradient';
+import { CurrentWorkout } from '../ui';
 
 export const Main = () => (
-  <View style={{ flex: 1 }}>
+  <LinearGradient
+    colors={['#52EDC7', '#5ACBFB']}
+    style={{ flex: 1 }}
+  >
     <TabView
       tabBarTextStyle={{ fontSize: 30 }}
       tabBarPosition="overlayBottom"
     >
-      <Text tabLabel="hello">hello</Text>
+      <CurrentWorkout tabLabel="+" />
       <Text tabLabel="world">world</Text>
     </TabView>
-  </View>
+  </LinearGradient>
 );
