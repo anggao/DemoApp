@@ -43,6 +43,11 @@ export class ExerciseList extends Component {
     });
   }
 
+  handlePress(exercise) {
+    this.props.addExercise(exercise);
+    this.props.closeModal();
+  }
+
   render() {
     return (
       <View style={{flex: 1, backgroundColor: '#efefec'}}>
@@ -75,12 +80,15 @@ export class ExerciseList extends Component {
         <ListView
           dataSource={this.state.matchingExercises}
           renderRow={exercise => (
-
+            <TouchableWithoutFeedback
+              onPress={() => this.handlePress.call(this, exercise)}
+            >
               <View style={styles.row}>
                 <Text style={styles.rowName}>
                   {exercise.name}
                 </Text>
               </View>
+            </TouchableWithoutFeedback>
           )}
         />
 

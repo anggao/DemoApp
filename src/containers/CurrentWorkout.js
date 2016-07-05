@@ -21,7 +21,8 @@ import {
 } from '../actions/actionCreators';
 
 import {
-  setExerciseModalVisibility
+  setExerciseModalVisibility,
+  addExercise
 } from '../actions/actions';
 
 const mapStateToProps = (state) => ({
@@ -33,6 +34,9 @@ const mapStateToProps = (state) => ({
 const mapActionsToProps = (dispatch) => ({
   setModalVisibility(visible) {
     return dispatch(setExerciseModalVisibility(visible));
+  },
+  addExercise(exercise) {
+    return dispatch(addExercise(exercise));
   }
 });
 
@@ -66,6 +70,7 @@ class Container extends Component {
           </View>
         </LinearGradient>
         <ExerciseModal
+          addExercise={this.props.addExercise}
           exercises={this.props.exercises}
           visible={this.props.exerciseModal}
           closeModal={() => this.props.setModalVisibility(false)}
