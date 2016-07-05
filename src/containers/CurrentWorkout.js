@@ -36,8 +36,11 @@ const mapActionsToProps = (dispatch) => ({
     return dispatch(setExerciseModalVisibility(visible));
   },
   addExercise(exercise) {
-    return dispatch(addExercise(exercise));
-  }
+    return dispatch(addExerciseToCurrentWorkout(exercise));
+  },
+  fetchCurrentWorkout() {
+    return dispatch(fetchCurrentWorkout());
+  },
 });
 
 class Container extends Component {
@@ -47,7 +50,7 @@ class Container extends Component {
   }
 
   componentDidMount() {
-    // this.props.fetchCurrentWorkout();
+    this.props.fetchCurrentWorkout();
   }
 
   render() {

@@ -1,0 +1,49 @@
+{
+  "current_workout": [
+    {
+      "name": "flat dumbbell bench press",
+      "category": {
+        "id": 4,
+        "name": "Chest",
+        "type": "Weight Training"
+      },
+      "id": 1
+    },
+    {
+      "name": "dumbbell curl",
+      "category": {
+        "id": 3,
+        "name": "Arms",
+        "type": "Weight Training"
+      },
+      "id": 2
+    },
+    {
+      "name": "quad extensions",
+      "category": {
+        "id": 1,
+        "name": "Legs",
+        "type": "Weight Training"
+      },
+      "id": 3
+    },
+    {
+      "name": "quad extensions",
+      "category": {
+        "id": 1,
+        "name": "Legs",
+        "type": "Weight Training"
+      },
+      "id": 4
+    },
+    {
+      "name": "quad extensions",
+      "category": {
+        "id": 1,
+        "name": "Legs",
+        "type": "Weight Training"
+      },
+      "id": 5
+    }
+  ]
+}
