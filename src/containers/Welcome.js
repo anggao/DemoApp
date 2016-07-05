@@ -6,8 +6,15 @@ import {
   TouchableOpacity
 } from 'react-native';
 
+import LinearGradient from 'react-native-linear-gradient';
+
+const COLOR_TOP = '#4A148C';
+const COLOR_BOTTON = '#880E4F';
+
 export const Welcome = (props) => (
-  <View style={{flex: 1}}>
+  <LinearGradient
+    colors={[COLOR_TOP, COLOR_BOTTON]}
+    style={{flex: 1}}>
     <View style={styles.titleContainer}>
       <Text style={styles.title}>
         DemoApp
@@ -25,7 +32,7 @@ export const Welcome = (props) => (
         </Text>
       </TouchableOpacity>
     </View>
-  </View>
+  </LinearGradient>
 );
 
 const styles = StyleSheet.create({
